@@ -1,0 +1,47 @@
+package org.clxmm.springbootsecuritydemo;
+
+import org.clxmm.springbootsecuritydemo.core.entry.SysUser;
+import org.clxmm.springbootsecuritydemo.core.service.ISysUserService;
+import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+@SpringBootTest
+@RunWith(SpringRunner.class)
+class SpringBootSecurityDemoApplicationTests {
+
+
+
+
+
+    @Autowired
+    ISysUserService sysUserService;
+
+
+
+
+
+    @Test
+    void contextLoads() {
+        SysUser admin = sysUserService.getUserByName("admin");
+        System.out.println(admin);
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
